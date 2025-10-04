@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Playlist Mover</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>YouTube Playlist Mover</h1>
+    
+    <div class="status-section">
+      <div class="status" id="status">
+        <span class="status-text">Ready</span>
+      </div>
+      <div class="progress-container" id="progressContainer" style="display: none;">
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="progress-text" id="progressText">0 / 0 videos processed</div>
+      </div>
+    </div>
+
+    <div class="info-section">
+      <p class="info-text">Open YouTube Watch Later playlist, then click Start to begin moving videos.</p>
+    </div>
+
+    <div class="controls">
+      <button id="startBtn" class="btn btn-primary">Start</button>
+      <button id="pauseBtn" class="btn btn-secondary" disabled>Pause</button>
+      <button id="stopBtn" class="btn btn-danger" disabled>Stop</button>
+    </div>
+
+    <div class="settings-section">
+      <label for="delayInput">Delay between videos (ms):</label>
+      <input type="number" id="delayInput" min="1000" max="10000" step="100" value="2000">
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
